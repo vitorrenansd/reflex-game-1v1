@@ -1,12 +1,18 @@
 package org.reflex;
 
-public class Main {
-	public static void main(String[] args) {
-		Game g = new Game();
+import java.util.Scanner;
 
-		g.setMinTime(1);
-		g.setMaxTime(5);
-		
-		g.testReactionTime();
+public class Main {
+	public static void main(String[] args) throws Exception{
+		Game g = new Game();
+		Scanner scan = new Scanner(System.in);
+
+		g.startGame();
+		scan.nextLine(); // Simulate user click
+		float reaction = g.registerClick();
+
+		if (reaction > 0) {
+			System.out.printf("Your reaction time: %.3f seconds%n", reaction);
+		}
 	}
 }
