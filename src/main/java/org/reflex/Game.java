@@ -15,4 +15,14 @@ public class Game {
         
         return randomTime;
     }
+
+    public void startGame() throws InterruptedException {
+        System.out.println("Wait... (red)");
+        int delay = getRandomDelay();
+
+        Thread.sleep(delay * 1000);
+        canClick = true;
+        startTime = System.nanoTime();
+        System.out.println("GREEN! Click now (Press Enter)");
+    }
 }
