@@ -11,7 +11,7 @@ public class Game {
     // Delay to show green image
     public int getRandomDelay() {
         Random rand = new Random();
-        int randomTime = rand.nextInt((maxTime - minTime) + 1) + minTime;
+        int randomTime = rand.nextInt((MAX_TIME - MIN_TIME) + 1) + MIN_TIME;
         
         return randomTime;
     }
