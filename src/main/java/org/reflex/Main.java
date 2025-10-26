@@ -1,4 +1,4 @@
-package org.reflex.game;
+package org.reflex;
 
 public class Main {
 	public static void main(String[] args) {
