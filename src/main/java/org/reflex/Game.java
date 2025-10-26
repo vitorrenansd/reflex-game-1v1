@@ -8,21 +8,8 @@ public class Game {
     private long startTime;
     private boolean canClick = false;
 
-
-    public int getMinTime() {
-        return this.minTime;
-    }
-    public void setMinTime(int minTime) {
-        this.minTime = minTime;
-    }
-    public int getMaxTime() {
-        return this.maxTime;
-    }
-    public void setMaxTime(int maxTime) {
-        this.maxTime = maxTime;
-    }
-
-    public int testReactionTime() {
+    // Delay to show green image
+    public int getRandomDelay() {
         Random rand = new Random();
         int randomTime = rand.nextInt((maxTime - minTime) + 1) + minTime;
         
