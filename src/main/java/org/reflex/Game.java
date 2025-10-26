@@ -25,4 +25,14 @@ public class Game {
         startTime = System.nanoTime();
         System.out.println("GREEN! Click now (Press Enter)");
     }
+
+    public float registerClick() {
+        if (!canClick) {
+            System.out.println("Too early!");
+            return -1;
+        }
+        long endTime = System.nanoTime();
+        canClick = false;
+        return (endTime - startTime) / 1_000_000_000f;
+    }
 }
