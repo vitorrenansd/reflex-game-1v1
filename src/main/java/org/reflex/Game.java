@@ -16,6 +16,7 @@ public class Game {
         return randomTime;
     }
 
+    // Start game logic
     public void startGame() throws InterruptedException {
         System.out.println("Wait... (red)");
         int delay = getRandomDelay();
@@ -26,6 +27,7 @@ public class Game {
         System.out.println("GREEN! Click now (Press Enter)");
     }
 
+    // Returns user click delay
     public float registerClick() {
         if (!canClick) {
             System.out.println("Too early!");
