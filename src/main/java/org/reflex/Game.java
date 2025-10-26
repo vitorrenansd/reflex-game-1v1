@@ -3,8 +3,10 @@ package org.reflex;
 import java.util.Random;
 
 public class Game {
-    private int minTime;
-    private int maxTime;
+    private int MIN_TIME = 1;
+    private int MAX_TIME = 5;
+    private long startTime;
+    private boolean canClick = false;
 
 
     public int getMinTime() {
